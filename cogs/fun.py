@@ -24,7 +24,7 @@ class FunCommandsCog(commands.Cog):
         await ctx.defer()
 
         async with httpx.AsyncClient() as client:
-            item = "+".join(items)
+            item = "+".join(items.split())
             url = self.SEARCH_URL.format(item)
 
             page = await client.get(url)
@@ -53,7 +53,7 @@ class FunCommandsCog(commands.Cog):
 
         embed = discord.Embed()
         embed.set_image(url=selected_image)
-        embed.set_author(name=f'"{" ".join(items)}"')
+        embed.set_author(name=f'"{items}"')
 
         await ctx.respond(embed=embed)
 

@@ -1,4 +1,3 @@
-from datetime import datetime
 from discord.ext import commands
 from discord import Bot, ApplicationContext, Message
 from classes.ai import AiClient
@@ -25,6 +24,8 @@ class AiCog(commands.Cog):
         )
 
         await message.reply(response)
+
+    # @commands.slash_command()
 
 
 def setup(bot: Bot):

@@ -1,6 +1,5 @@
 import os
 import discord
-from discord.ext import bridge
 from dotenv import load_dotenv
 from rich import print
 from classes import ai
@@ -14,7 +13,7 @@ bot_intent.message_content = True
 bot_intent.messages = True
 bot_intent.members = True
 
-bot = discord.Bot(intents=bot_intent, owner_id=912949047650824282, commands_prefix="!")
+bot = discord.Bot(intents=bot_intent, owner_id=912949047650824282)
 
 ART = r"""
 [bold blue]
